@@ -1,0 +1,276 @@
+2025-09-15 01:55:30 - phylo_analyzer - INFO - ============================================================
+2025-09-15 01:55:30 - phylo_analyzer - INFO - PHYLOGENETIC TREE ANALYZER
+2025-09-15 01:55:30 - phylo_analyzer - INFO - ============================================================
+2025-09-15 01:55:30 - phylo_analyzer - INFO - Input file: data/sequence.fasta
+2025-09-15 01:55:30 - phylo_analyzer - INFO - Output directory: output/
+2025-09-15 01:55:30 - phylo_analyzer - INFO - Alignment method: muscle
+2025-09-15 01:55:30 - phylo_analyzer - INFO - Tree method: neighbor_joining
+2025-09-15 01:55:30 - phylo_analyzer - INFO - Substitution model: identity
+2025-09-15 01:55:30 - phylo_analyzer - INFO - Bootstrap replicates: 100
+2025-09-15 01:55:30 - phylo_analyzer - INFO - Minimum sequence length: 50
+2025-09-15 01:55:30 - phylo_analyzer - INFO - 
+----------------------------------------
+2025-09-15 01:55:30 - phylo_analyzer - INFO - STEP 1: PARSING SEQUENCES
+2025-09-15 01:55:30 - phylo_analyzer - INFO - ----------------------------------------
+2025-09-15 01:55:30 - phylo_analyzer - INFO - Parsing sequence file: data/sequence.fasta
+2025-09-15 01:55:30 - phylo_analyzer - INFO - Successfully parsed 4 sequences from data/sequence.fasta
+2025-09-15 01:55:30 - phylo_analyzer - INFO - Validated 4 out of 4 sequences
+2025-09-15 01:55:30 - phylo_analyzer - INFO - Sequence info: 4 sequences, avg length: 95.2
+2025-09-15 01:55:30 - phylo_analyzer - INFO - Sequences parsed successfully: {'count': 4, 'total_length': 381, 'avg_length': 95.25, 'min_length': 95, 'max_length': 96, 'sequence_ids': ['Sequence_1_Human_Hemoglobin', 'Sequence_2_Mouse_Hemoglobin', 'Sequence_3_Rat_Hemoglobin', 'Sequence_4_Chicken_Hemoglobin']}
+2025-09-15 01:55:30 - phylo_analyzer - INFO - 
+----------------------------------------
+2025-09-15 01:55:30 - phylo_analyzer - INFO - STEP 2: MULTIPLE SEQUENCE ALIGNMENT
+2025-09-15 01:55:30 - phylo_analyzer - INFO - ----------------------------------------
+2025-09-15 01:55:30 - phylo_analyzer - INFO - Performing multiple sequence alignment using muscle on 4 sequences
+2025-09-15 01:55:30 - phylo_analyzer - ERROR - MUSCLE alignment failed: Non-zero return code 1 from 'muscle -in C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmpgcfl0exi.fasta -out C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmpfbg9mxwi.fasta', message "'muscle' is not recognized as an internal or external command,"
+2025-09-15 01:55:30 - phylo_analyzer - ERROR - Analysis failed: Non-zero return code 1 from 'muscle -in C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmpgcfl0exi.fasta -out C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmpfbg9mxwi.fasta', message "'muscle' is not recognized as an internal or external command,"
+2025-09-15 01:55:30 - phylo_analyzer - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "F:\CODING\aadyaProject\phylogenetic_tree_analyzer\main.py", line 152, in run_phylogenetic_analysis
+    alignment = aligner.multiple_sequence_align(sequences, alignment_method)
+  File "F:\CODING\aadyaProject\phylogenetic_tree_analyzer\alignment_manager.py", line 115, in multiple_sequence_align
+    return self._muscle_alignment(sequences)
+  File "F:\CODING\aadyaProject\phylogenetic_tree_analyzer\alignment_manager.py", line 144, in _muscle_alignment
+    stdout, stderr = muscle_cline()
+  File "C:\Users\Ameya Taneja\.pyenv\pyenv-win\versions\3.10.10\lib\site-packages\Bio\Application\__init__.py", line 591, in __call__
+    raise ApplicationError(return_code, str(self), stdout_str, stderr_str)
+Bio.Application.ApplicationError: Non-zero return code 1 from 'muscle -in C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmpgcfl0exi.fasta -out C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmpfbg9mxwi.fasta', message "'muscle' is not recognized as an internal or external command,"
+2025-09-15 01:55:42 - phylo_analyzer - INFO - ============================================================
+2025-09-15 01:55:42 - phylo_analyzer - INFO - PHYLOGENETIC TREE ANALYZER
+2025-09-15 01:55:42 - phylo_analyzer - INFO - ============================================================
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Input file: data/sequence.fasta
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Output directory: output/
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Alignment method: muscle
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Tree method: neighbor_joining
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Substitution model: identity
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Bootstrap replicates: 100
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Minimum sequence length: 50
+2025-09-15 01:55:42 - phylo_analyzer - INFO - 
+----------------------------------------
+2025-09-15 01:55:42 - phylo_analyzer - INFO - STEP 1: PARSING SEQUENCES
+2025-09-15 01:55:42 - phylo_analyzer - INFO - ----------------------------------------
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Parsing sequence file: data/sequence.fasta
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Successfully parsed 4 sequences from data/sequence.fasta
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Validated 4 out of 4 sequences
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Sequence info: 4 sequences, avg length: 95.2
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Sequences parsed successfully: {'count': 4, 'total_length': 381, 'avg_length': 95.25, 'min_length': 95, 'max_length': 96, 'sequence_ids': ['Sequence_1_Human_Hemoglobin', 'Sequence_2_Mouse_Hemoglobin', 'Sequence_3_Rat_Hemoglobin', 'Sequence_4_Chicken_Hemoglobin']}
+2025-09-15 01:55:42 - phylo_analyzer - INFO - 
+----------------------------------------
+2025-09-15 01:55:42 - phylo_analyzer - INFO - STEP 2: MULTIPLE SEQUENCE ALIGNMENT
+2025-09-15 01:55:42 - phylo_analyzer - INFO - ----------------------------------------
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Performing multiple sequence alignment using muscle on 4 sequences
+2025-09-15 01:55:42 - phylo_analyzer - ERROR - MUSCLE alignment failed: Non-zero return code 1 from 'muscle -in C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmpesmpsf4e.fasta -out C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmp98kv2axc.fasta', message "'muscle' is not recognized as an internal or external command,"
+2025-09-15 01:55:42 - phylo_analyzer - WARNING - muscle alignment failed: Non-zero return code 1 from 'muscle -in C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmpesmpsf4e.fasta -out C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmp98kv2axc.fasta', message "'muscle' is not recognized as an internal or external command,"
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Falling back to simple alignment method
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Performing multiple sequence alignment using simple on 4 sequences
+2025-09-15 01:55:42 - phylo_analyzer - WARNING - Simple alignment for >2 sequences using basic padding method.
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Alignment saved to output/alignments\aligned_sequences.fasta in fasta format
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Alignment statistics: 4 sequences, length: 96, conservation: 16.7%
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Alignment completed: {'num_sequences': 4, 'alignment_length': 96, 'conserved_positions': 16, 'conservation_percentage': 16.666666666666664, 'gap_positions': 0, 'gap_percentage': 0.0}
+2025-09-15 01:55:42 - phylo_analyzer - INFO - 
+----------------------------------------
+2025-09-15 01:55:42 - phylo_analyzer - INFO - STEP 3: PHYLOGENETIC TREE CONSTRUCTION
+2025-09-15 01:55:42 - phylo_analyzer - INFO - ----------------------------------------
+2025-09-15 01:55:42 - phylo_analyzer - INFO - Building phylogenetic tree using neighbor_joining method
+2025-09-15 01:55:42 - phylo_analyzer - ERROR - Error building Neighbor-Joining tree: 'DistanceMatrix' object has no attribute 'shape'
+2025-09-15 01:55:42 - phylo_analyzer - ERROR - Analysis failed: 'DistanceMatrix' object has no attribute 'shape'
+2025-09-15 01:55:42 - phylo_analyzer - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "F:\CODING\aadyaProject\phylogenetic_tree_analyzer\main.py", line 176, in run_phylogenetic_analysis
+    tree = tree_builder.build_tree(alignment, tree_method, substitution_model, bootstrap_replicates)
+  File "F:\CODING\aadyaProject\phylogenetic_tree_analyzer\tree_builder.py", line 71, in build_tree
+    return self._build_neighbor_joining_tree(alignment, bootstrap_replicates)
+  File "F:\CODING\aadyaProject\phylogenetic_tree_analyzer\tree_builder.py", line 94, in _build_neighbor_joining_tree
+    self.logger.debug(f"Distance matrix calculated: {distance_matrix.shape}")
+AttributeError: 'DistanceMatrix' object has no attribute 'shape'
+2025-09-15 01:55:59 - phylo_analyzer - INFO - ============================================================
+2025-09-15 01:55:59 - phylo_analyzer - INFO - PHYLOGENETIC TREE ANALYZER
+2025-09-15 01:55:59 - phylo_analyzer - INFO - ============================================================
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Input file: data/sequence.fasta
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Output directory: output/
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Alignment method: muscle
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Tree method: neighbor_joining
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Substitution model: identity
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Bootstrap replicates: 100
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Minimum sequence length: 50
+2025-09-15 01:55:59 - phylo_analyzer - INFO - 
+----------------------------------------
+2025-09-15 01:55:59 - phylo_analyzer - INFO - STEP 1: PARSING SEQUENCES
+2025-09-15 01:55:59 - phylo_analyzer - INFO - ----------------------------------------
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Parsing sequence file: data/sequence.fasta
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Successfully parsed 4 sequences from data/sequence.fasta
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Validated 4 out of 4 sequences
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Sequence info: 4 sequences, avg length: 95.2
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Sequences parsed successfully: {'count': 4, 'total_length': 381, 'avg_length': 95.25, 'min_length': 95, 'max_length': 96, 'sequence_ids': ['Sequence_1_Human_Hemoglobin', 'Sequence_2_Mouse_Hemoglobin', 'Sequence_3_Rat_Hemoglobin', 'Sequence_4_Chicken_Hemoglobin']}
+2025-09-15 01:55:59 - phylo_analyzer - INFO - 
+----------------------------------------
+2025-09-15 01:55:59 - phylo_analyzer - INFO - STEP 2: MULTIPLE SEQUENCE ALIGNMENT
+2025-09-15 01:55:59 - phylo_analyzer - INFO - ----------------------------------------
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Performing multiple sequence alignment using muscle on 4 sequences
+2025-09-15 01:55:59 - phylo_analyzer - ERROR - MUSCLE alignment failed: Non-zero return code 1 from 'muscle -in C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmplb4jgj5k.fasta -out C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmpb3e83488.fasta', message "'muscle' is not recognized as an internal or external command,"
+2025-09-15 01:55:59 - phylo_analyzer - WARNING - muscle alignment failed: Non-zero return code 1 from 'muscle -in C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmplb4jgj5k.fasta -out C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmpb3e83488.fasta', message "'muscle' is not recognized as an internal or external command,"
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Falling back to simple alignment method
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Performing multiple sequence alignment using simple on 4 sequences
+2025-09-15 01:55:59 - phylo_analyzer - WARNING - Simple alignment for >2 sequences using basic padding method.
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Alignment saved to output/alignments\aligned_sequences.fasta in fasta format
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Alignment statistics: 4 sequences, length: 96, conservation: 16.7%
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Alignment completed: {'num_sequences': 4, 'alignment_length': 96, 'conserved_positions': 16, 'conservation_percentage': 16.666666666666664, 'gap_positions': 0, 'gap_percentage': 0.0}
+2025-09-15 01:55:59 - phylo_analyzer - INFO - 
+----------------------------------------
+2025-09-15 01:55:59 - phylo_analyzer - INFO - STEP 3: PHYLOGENETIC TREE CONSTRUCTION
+2025-09-15 01:55:59 - phylo_analyzer - INFO - ----------------------------------------
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Building phylogenetic tree using neighbor_joining method
+2025-09-15 01:55:59 - phylo_analyzer - INFO - Performing 100 bootstrap replicates
+2025-09-15 01:55:59 - phylo_analyzer - ERROR - Error building Neighbor-Joining tree: 'str' object is not callable
+2025-09-15 01:55:59 - phylo_analyzer - ERROR - Analysis failed: 'str' object is not callable
+2025-09-15 01:55:59 - phylo_analyzer - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "F:\CODING\aadyaProject\phylogenetic_tree_analyzer\main.py", line 176, in run_phylogenetic_analysis
+    tree = tree_builder.build_tree(alignment, tree_method, substitution_model, bootstrap_replicates)
+  File "F:\CODING\aadyaProject\phylogenetic_tree_analyzer\tree_builder.py", line 71, in build_tree
+    return self._build_neighbor_joining_tree(alignment, bootstrap_replicates)
+  File "F:\CODING\aadyaProject\phylogenetic_tree_analyzer\tree_builder.py", line 104, in _build_neighbor_joining_tree
+    bootstrap_tree = bootstrap_consensus(alignment, bootstrap_replicates,
+  File "C:\Users\Ameya Taneja\.pyenv\pyenv-win\versions\3.10.10\lib\site-packages\Bio\Phylo\Consensus.py", line 613, in bootstrap_consensus
+    tree = consensus(trees)
+TypeError: 'str' object is not callable
+2025-09-15 01:56:17 - phylo_analyzer - INFO - ============================================================
+2025-09-15 01:56:17 - phylo_analyzer - INFO - PHYLOGENETIC TREE ANALYZER
+2025-09-15 01:56:17 - phylo_analyzer - INFO - ============================================================
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Input file: data/sequence.fasta
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Output directory: output/
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Alignment method: muscle
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Tree method: neighbor_joining
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Substitution model: identity
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Bootstrap replicates: 100
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Minimum sequence length: 50
+2025-09-15 01:56:17 - phylo_analyzer - INFO - 
+----------------------------------------
+2025-09-15 01:56:17 - phylo_analyzer - INFO - STEP 1: PARSING SEQUENCES
+2025-09-15 01:56:17 - phylo_analyzer - INFO - ----------------------------------------
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Parsing sequence file: data/sequence.fasta
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Successfully parsed 4 sequences from data/sequence.fasta
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Validated 4 out of 4 sequences
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Sequence info: 4 sequences, avg length: 95.2
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Sequences parsed successfully: {'count': 4, 'total_length': 381, 'avg_length': 95.25, 'min_length': 95, 'max_length': 96, 'sequence_ids': ['Sequence_1_Human_Hemoglobin', 'Sequence_2_Mouse_Hemoglobin', 'Sequence_3_Rat_Hemoglobin', 'Sequence_4_Chicken_Hemoglobin']}
+2025-09-15 01:56:17 - phylo_analyzer - INFO - 
+----------------------------------------
+2025-09-15 01:56:17 - phylo_analyzer - INFO - STEP 2: MULTIPLE SEQUENCE ALIGNMENT
+2025-09-15 01:56:17 - phylo_analyzer - INFO - ----------------------------------------
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Performing multiple sequence alignment using muscle on 4 sequences
+2025-09-15 01:56:17 - phylo_analyzer - ERROR - MUSCLE alignment failed: Non-zero return code 1 from 'muscle -in C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmplehi4rti.fasta -out C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmpbphcxgrv.fasta', message "'muscle' is not recognized as an internal or external command,"
+2025-09-15 01:56:17 - phylo_analyzer - WARNING - muscle alignment failed: Non-zero return code 1 from 'muscle -in C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmplehi4rti.fasta -out C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmpbphcxgrv.fasta', message "'muscle' is not recognized as an internal or external command,"
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Falling back to simple alignment method
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Performing multiple sequence alignment using simple on 4 sequences
+2025-09-15 01:56:17 - phylo_analyzer - WARNING - Simple alignment for >2 sequences using basic padding method.
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Alignment saved to output/alignments\aligned_sequences.fasta in fasta format
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Alignment statistics: 4 sequences, length: 96, conservation: 16.7%
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Alignment completed: {'num_sequences': 4, 'alignment_length': 96, 'conserved_positions': 16, 'conservation_percentage': 16.666666666666664, 'gap_positions': 0, 'gap_percentage': 0.0}
+2025-09-15 01:56:17 - phylo_analyzer - INFO - 
+----------------------------------------
+2025-09-15 01:56:17 - phylo_analyzer - INFO - STEP 3: PHYLOGENETIC TREE CONSTRUCTION
+2025-09-15 01:56:17 - phylo_analyzer - INFO - ----------------------------------------
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Building phylogenetic tree using neighbor_joining method
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Performing 100 bootstrap replicates
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Bootstrap analysis completed
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Neighbor-Joining tree construction completed
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Tree saved to output/trees\phylogenetic_tree_neighbor_joining.newick in newick format
+2025-09-15 01:56:17 - phylo_analyzer - ERROR - Error calculating tree statistics: 'Tree' object has no attribute 'count_internals'
+2025-09-15 01:56:17 - phylo_analyzer - INFO - Tree construction completed: {}
+2025-09-15 01:56:17 - phylo_analyzer - INFO - 
+----------------------------------------
+2025-09-15 01:56:17 - phylo_analyzer - INFO - STEP 4: TREE VISUALIZATION
+2025-09-15 01:56:17 - phylo_analyzer - INFO - ----------------------------------------
+2025-09-15 01:56:19 - phylo_analyzer - INFO - Plot saved to output/plots\phylogenetic_tree_neighbor_joining.png
+2025-09-15 01:56:19 - phylo_analyzer - INFO - Tree plot saved to output/plots\phylogenetic_tree_neighbor_joining.png
+2025-09-15 01:56:19 - phylo_analyzer - INFO - Tree visualization completed
+2025-09-15 01:56:19 - phylo_analyzer - INFO - Plot saved to output/plots\analysis_summary.png
+2025-09-15 01:56:19 - phylo_analyzer - INFO - Summary plot created
+2025-09-15 01:56:19 - phylo_analyzer - INFO - 
+----------------------------------------
+2025-09-15 01:56:19 - phylo_analyzer - INFO - STEP 5: GENERATING REPORT
+2025-09-15 01:56:19 - phylo_analyzer - INFO - ----------------------------------------
+2025-09-15 01:56:19 - phylo_analyzer - INFO - Analysis report saved to output/analysis_report.txt
+2025-09-15 01:56:19 - phylo_analyzer - INFO - 
+============================================================
+2025-09-15 01:56:19 - phylo_analyzer - INFO - ANALYSIS COMPLETED SUCCESSFULLY
+2025-09-15 01:56:19 - phylo_analyzer - INFO - ============================================================
+2025-09-15 01:56:19 - phylo_analyzer - INFO - Total runtime: 2.27 seconds
+2025-09-15 01:56:19 - phylo_analyzer - INFO - Results saved to: output/
+2025-09-15 01:56:19 - phylo_analyzer - INFO - Files generated:
+2025-09-15 01:56:19 - phylo_analyzer - INFO -   - Alignment: output/alignments\aligned_sequences.fasta
+2025-09-15 01:56:19 - phylo_analyzer - INFO -   - Tree: output/trees\phylogenetic_tree_neighbor_joining.newick
+2025-09-15 01:56:19 - phylo_analyzer - INFO -   - Tree plot: output/plots\phylogenetic_tree_neighbor_joining.png
+2025-09-15 01:56:19 - phylo_analyzer - INFO -   - Summary plot: output/plots\analysis_summary.png
+2025-09-15 01:56:19 - phylo_analyzer - INFO -   - Report: output/analysis_report.txt
+2025-09-15 01:56:19 - phylo_analyzer - INFO -   - Log file: output/logs\phylo_analysis.log
+2025-09-15 01:57:33 - phylo_analyzer - INFO - ============================================================
+2025-09-15 01:57:33 - phylo_analyzer - INFO - PHYLOGENETIC TREE ANALYZER
+2025-09-15 01:57:33 - phylo_analyzer - INFO - ============================================================
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Input file: data/sequence.fasta
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Output directory: output/
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Alignment method: muscle
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Tree method: neighbor_joining
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Substitution model: identity
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Bootstrap replicates: 100
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Minimum sequence length: 50
+2025-09-15 01:57:33 - phylo_analyzer - INFO - 
+----------------------------------------
+2025-09-15 01:57:33 - phylo_analyzer - INFO - STEP 1: PARSING SEQUENCES
+2025-09-15 01:57:33 - phylo_analyzer - INFO - ----------------------------------------
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Parsing sequence file: data/sequence.fasta
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Successfully parsed 4 sequences from data/sequence.fasta
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Validated 4 out of 4 sequences
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Sequence info: 4 sequences, avg length: 95.2
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Sequences parsed successfully: {'count': 4, 'total_length': 381, 'avg_length': 95.25, 'min_length': 95, 'max_length': 96, 'sequence_ids': ['Sequence_1_Human_Hemoglobin', 'Sequence_2_Mouse_Hemoglobin', 'Sequence_3_Rat_Hemoglobin', 'Sequence_4_Chicken_Hemoglobin']}
+2025-09-15 01:57:33 - phylo_analyzer - INFO - 
+----------------------------------------
+2025-09-15 01:57:33 - phylo_analyzer - INFO - STEP 2: MULTIPLE SEQUENCE ALIGNMENT
+2025-09-15 01:57:33 - phylo_analyzer - INFO - ----------------------------------------
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Performing multiple sequence alignment using muscle on 4 sequences
+2025-09-15 01:57:33 - phylo_analyzer - ERROR - MUSCLE alignment failed: Non-zero return code 1 from 'muscle -in C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmpp3lichzm.fasta -out C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmp575la7ld.fasta', message "'muscle' is not recognized as an internal or external command,"
+2025-09-15 01:57:33 - phylo_analyzer - WARNING - muscle alignment failed: Non-zero return code 1 from 'muscle -in C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmpp3lichzm.fasta -out C:\\Users\\AMEYAT~1\\AppData\\Local\\Temp\\tmp575la7ld.fasta', message "'muscle' is not recognized as an internal or external command,"
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Falling back to simple alignment method
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Performing multiple sequence alignment using simple on 4 sequences
+2025-09-15 01:57:33 - phylo_analyzer - WARNING - Simple alignment for >2 sequences using basic padding method.
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Alignment saved to output/alignments\aligned_sequences.fasta in fasta format
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Alignment statistics: 4 sequences, length: 96, conservation: 16.7%
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Alignment completed: {'num_sequences': 4, 'alignment_length': 96, 'conserved_positions': 16, 'conservation_percentage': 16.666666666666664, 'gap_positions': 0, 'gap_percentage': 0.0}
+2025-09-15 01:57:33 - phylo_analyzer - INFO - 
+----------------------------------------
+2025-09-15 01:57:33 - phylo_analyzer - INFO - STEP 3: PHYLOGENETIC TREE CONSTRUCTION
+2025-09-15 01:57:33 - phylo_analyzer - INFO - ----------------------------------------
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Building phylogenetic tree using neighbor_joining method
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Performing 100 bootstrap replicates
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Bootstrap analysis completed
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Neighbor-Joining tree construction completed
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Tree saved to output/trees\phylogenetic_tree_neighbor_joining.newick in newick format
+2025-09-15 01:57:33 - phylo_analyzer - ERROR - Error calculating tree statistics: 'Tree' object has no attribute 'count_internals'
+2025-09-15 01:57:33 - phylo_analyzer - INFO - Tree construction completed: {}
+2025-09-15 01:57:33 - phylo_analyzer - INFO - 
+----------------------------------------
+2025-09-15 01:57:33 - phylo_analyzer - INFO - STEP 4: TREE VISUALIZATION
+2025-09-15 01:57:33 - phylo_analyzer - INFO - ----------------------------------------
+2025-09-15 01:57:34 - phylo_analyzer - INFO - Plot saved to output/plots\phylogenetic_tree_neighbor_joining.png
+2025-09-15 01:57:34 - phylo_analyzer - INFO - Tree plot saved to output/plots\phylogenetic_tree_neighbor_joining.png
+2025-09-15 01:57:34 - phylo_analyzer - INFO - Tree visualization completed
+2025-09-15 01:57:35 - phylo_analyzer - INFO - Plot saved to output/plots\analysis_summary.png
+2025-09-15 01:57:35 - phylo_analyzer - INFO - Summary plot created
+2025-09-15 01:57:35 - phylo_analyzer - INFO - 
+----------------------------------------
+2025-09-15 01:57:35 - phylo_analyzer - INFO - STEP 5: GENERATING REPORT
+2025-09-15 01:57:35 - phylo_analyzer - INFO - ----------------------------------------
+2025-09-15 01:57:35 - phylo_analyzer - INFO - Analysis report saved to output/analysis_report.txt
+2025-09-15 01:57:35 - phylo_analyzer - INFO - 
+============================================================
+2025-09-15 01:57:35 - phylo_analyzer - INFO - ANALYSIS COMPLETED SUCCESSFULLY
+2025-09-15 01:57:35 - phylo_analyzer - INFO - ============================================================
+2025-09-15 01:57:35 - phylo_analyzer - INFO - Total runtime: 1.33 seconds
+2025-09-15 01:57:35 - phylo_analyzer - INFO - Results saved to: output/
+2025-09-15 01:57:35 - phylo_analyzer - INFO - Files generated:
+2025-09-15 01:57:35 - phylo_analyzer - INFO -   - Alignment: output/alignments\aligned_sequences.fasta
+2025-09-15 01:57:35 - phylo_analyzer - INFO -   - Tree: output/trees\phylogenetic_tree_neighbor_joining.newick
+2025-09-15 01:57:35 - phylo_analyzer - INFO -   - Tree plot: output/plots\phylogenetic_tree_neighbor_joining.png
+2025-09-15 01:57:35 - phylo_analyzer - INFO -   - Summary plot: output/plots\analysis_summary.png
+2025-09-15 01:57:35 - phylo_analyzer - INFO -   - Report: output/analysis_report.txt
+2025-09-15 01:57:35 - phylo_analyzer - INFO -   - Log file: output/logs\phylo_analysis.log

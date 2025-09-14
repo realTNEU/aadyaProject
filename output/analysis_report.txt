@@ -1,0 +1,31 @@
+PHYLOGENETIC TREE ANALYSIS REPORT
+==================================================
+
+Analysis Date: 2025-09-15 01:57:35
+Input File: data/sequence.fasta
+Output Directory: output/
+
+ANALYSIS PARAMETERS
+--------------------
+Alignment Method: muscle
+Tree Construction Method: neighbor_joining
+
+SEQUENCE ALIGNMENT STATISTICS
+------------------------------
+Num Sequences: 4
+Alignment Length: 96
+Conserved Positions: 16
+Conservation Percentage: 16.667
+Gap Positions: 0
+Gap Percentage: 0.000
+
+PHYLOGENETIC TREE STATISTICS
+------------------------------
+
+OUTPUT FILES
+------------
+Aligned sequences: output/alignments\aligned_sequences.fasta
+Phylogenetic tree: output/trees\phylogenetic_tree_neighbor_joining.newick
+Tree visualization: output/plots\phylogenetic_tree_neighbor_joining.png
+Summary plot: output/plots\analysis_summary.png
+Log file: output/logs\phylo_analysis.log
